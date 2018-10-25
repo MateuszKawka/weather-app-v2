@@ -22,84 +22,79 @@
 </template>
 
 <script>
-  export default {
-    components: {
-  
+export default {
+  components: {},
+  data() {
+    return {
+      isCitySaved: Boolean
+    };
+  },
+  computed: {},
+  methods: {
+    weatherCardTrigger: function() {
+      this.$store.commit("weatherCardTrigger");
     },
-    data() {
-      return {
-        isCitySaved: false
+    saveOrRemoveCity: function() {
+      let cityName = this.$store.state.cityName;
+      if (this.isCitySaved === false) {
+        this.$store.commit("saveCity", cityName);
+        this.isCitySaved = true;
+      } else {
+        this.$store.commit("removeCity", cityName);
+        this.isCitySaved = false;
       }
+      this.saveCitiesToLocalStorage();
     },
-    computed: {
-  
+    saveCitiesToLocalStorage: function() {
+      this.$store.dispatch("saveCitiesToLocalStorage");
     },
-    methods: {
-      weatherCardTrigger: function() {
-        this.$store.commit('weatherCardTrigger')
-      },
-      saveOrRemoveCity: function() {
-        this.checkIfCityIsSaved()
-        let cityName = this.$store.state.cityName;
-        if (this.isCitySaved === false) {
-          this.$store.commit('saveCity', cityName);
-        } else {
-          this.$store.commit('removeCity', cityName)
-        }
-        this.saveCitiesToLocalStorage()
-      },
-      saveCitiesToLocalStorage: function() {
-        this.$store.dispatch('saveCitiesToLocalStorage')
-      },
-      checkIfCityIsSaved: function() {
-        let name = this.$store.state.cityName;
-        console.log(name)
-        let cities = this.$store.state.savedCities;
-        console.log(cities.indexOf(name))
-        if (cities.indexOf(name) > -1) {
-          this.isCitySaved = true
-        } else {
-          this.isCitySaved = false
-        }
+    checkIfCityIsSaved: function() {
+      let name = this.$store.state.cityName;
+      let cities = this.$store.state.savedCities;
+      if (cities.indexOf(name) > -1) {
+        this.isCitySaved = true;
+      } else {
+        this.isCitySaved = false;
       }
-    },
-    mounted() {
-      this.checkIfCityIsSaved()
     }
+  },
+  beforeMount() {
+    this.checkIfCityIsSaved();
   }
+};
 </script>
 
 <style lang="scss" scoped>
-  .bar {
-    height: 10vh;
-    background: #fff;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  
-  .icon {
-    font-size: 24px;
-  }
-  
-  .title {
-    padding-top: 4px;
-    font-weight: 500;
-  }
-  
-  .columns {
-    width: 100%;
-  }
-  
-  .column {
-    padding: 0;
-  }
-  
-  .bookmark-icon {
-    color: #ababab;
-  }
-  
-  .bookmark-icon--save {
-    color: #ffcf11;
-  }
+.bar {
+  height: 10vh;
+  background: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.icon {
+  font-size: 24px;
+}
+
+.title {
+  padding-top: 4px;
+  font-weight: 500;
+}
+
+.columns {
+  width: 100%;
+}
+
+.column {
+  padding: 0;
+}
+
+.bookmark-icon {
+  color: #ababab;
+}
+
+.bookmark-icon--save {
+  color: #ffcf11;
+}
 </style>
