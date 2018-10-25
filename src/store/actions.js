@@ -9,8 +9,7 @@ export default {
     fetch("https://mateuszkawka.github.io/weather-app/src/current.city.list.min.json")
       .then(resp => resp.json())
       .then(function(data) {
-        citiesList = data
-        console.log('ss')
+        console.log(data)
       })
       .catch(function(error) {
         console.log(error);

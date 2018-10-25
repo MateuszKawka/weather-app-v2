@@ -2,7 +2,7 @@ export default {
   filterList: function(state) {
       let filteredList = []
       state.shortCities.filter(item => {
-        if(item.name.toLowerCase().indexOf(state.searchQ.toLowerCase()) > -1)
+        if(item.name.toLowerCase().indexOf(state.searchQ.toLowerCase()) === 0)
         filteredList.unshift(item)
             
             // output max results

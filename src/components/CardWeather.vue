@@ -1,5 +1,6 @@
 <template>
-  <div class="container">
+<div>
+  <div class="c">
     <BarTop />
     <div class="card">
       <div class="card-image">
@@ -22,6 +23,7 @@
       </div>
     </div>
   </div>
+</div>
 </template>
 
 <script>
@@ -65,9 +67,14 @@
   }
   
   .container {
-    top: 0;
+    
+    
   }
   
+  .subtitle{
+    color: #6b6b6b;
+  }
+
   .card .container {
     margin-top: 2rem;
   }
@@ -78,6 +85,10 @@
   
   .image {}
   
+  .temp {
+    color: #333;
+  }
+
   .image img {
     height: 92px;
   }

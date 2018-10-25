@@ -4,7 +4,7 @@
       <Start v-if='!showWeatherCard' />
     </transition>
     <transition name="slide-fade">
-      <CardWeather v-if='showWeatherCard' />
+      <CardWeather v-if='showWeatherCard' class='card-weather' />
     </transition>
   </div>
 </template>
@@ -41,6 +41,11 @@
   
   .wi {
     color: #fff;
+  }
+  
+  .card-weather {
+    position: absolute;
+    top: 0;
   }
   
   #app {

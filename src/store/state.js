@@ -7,19 +7,39 @@ export default {
   filteredList: [],
   searchQ: '',
   showList: false,
-  shortCities: [{
-    name: 'Warsaw'
-  },
-  {
-    name: 'Paris'
-  },
-  {
-    name: 'Moscow'
-  },
-  {
-    name: 'New York'
-  },
-  {
-    name: 'Paris'
-  }]
+  shortCities: [
+    {
+      name: 'Warsaw'
+    },
+    {
+      name: 'Paris'
+    },
+    {
+      name: 'Moscow'
+    },
+    {
+      name: 'Venice'
+    },
+    {
+      name: 'Milan'
+    },
+    {
+      name: 'Rome'
+    },
+    {
+      name: 'Tunis'
+    },
+    {
+      name: 'Palermo'
+    },
+    {
+      name: 'Ancona'
+    },
+    {
+      name: 'Sassari'
+    },
+    {
+      name: 'Naples'
+    }
+  ]
 }
