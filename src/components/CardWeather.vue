@@ -54,6 +54,8 @@
 </script>
 
 <style lang="scss" scoped>
+@import "@/assets/_variables.scss";
+
   .card-content {
     padding: 1rem;
     height: 60%;
@@ -76,7 +78,7 @@
   }
   
   .subtitle{
-    color: #6b6b6b;
+    color: $dark;
   }
 
   .card .container {
@@ -90,7 +92,7 @@
   .image {}
   
   .temp {
-    color: #333;
+    color: $dark;
   }
 
   .image img {
@@ -100,11 +102,6 @@
   .box {
     box-shadow: none;
     padding: 0;
-  }
-  
-  .main-info {
-    color: #A0C1B9;
-    font-weight: 600;
   }
   
   .title {

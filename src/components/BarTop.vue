@@ -39,11 +39,11 @@ export default {
       if (this.isCitySaved === false) {
         this.$store.commit("saveCity", cityName);
         this.isCitySaved = true;
-        this.$store.commit("setAlertText", 'City saved succesfull!')
+        this.$store.commit("setAlertText", "City saved succesfull!");
       } else {
         this.$store.commit("removeCity", cityName);
         this.isCitySaved = false;
-        this.$store.commit("setAlertText", 'City removed succesfull!')
+        this.$store.commit("setAlertText", "City removed succesfull!");
       }
       this.saveCitiesToLocalStorage();
     },
@@ -67,9 +67,11 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@import "@/assets/_variables.scss";
+
 .bar {
   height: 10vh;
-  background: #fff;
+  background: $white;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -93,10 +95,10 @@ export default {
 }
 
 .bookmark-icon {
-  color: #ababab;
+  color: $gray;
 }
 
 .bookmark-icon--save {
-  color: #ffcf11;
+  color: $light-details;
 }
 </style>

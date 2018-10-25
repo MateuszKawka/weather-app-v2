@@ -1,6 +1,6 @@
 export default {
-  setWeatherData: (state,data) => state.weatherData  = data,
-  setCitiesList: (state,data) => state.cities = data,
+  setWeatherData: (state, data) => state.weatherData = data,
+  setCitiesList: (state, data) => state.cities = data,
   weatherCardTrigger: state => state.showWeatherCard = !state.showWeatherCard,
   clearFilteredList: state => state.filteredList = [],
   addToFilteredList: (state, data) => state.filteredList.unshift(data),

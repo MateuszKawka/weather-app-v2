@@ -7,34 +7,36 @@
 
 
 <script>
-  export default {
-    data() {
-      return {
-        searchQ: ''
-      }
+export default {
+  data() {
+    return {
+      searchQ: ""
+    };
+  },
+  methods: {
+    setSearchQ: function() {
+      this.showList();
+      this.$store.commit("setSearchQ", this.searchQ);
     },
-    methods: {
-      setSearchQ: function() {
-        this.showList()
-        this.$store.commit('setSearchQ', this.searchQ)
-      },
-      showList: function() {
-        this.$store.commit('showListTrigger', true)
-      }
-    },
-  
+    showList: function() {
+      this.$store.commit("showListTrigger", true);
+    }
   }
+};
 </script>
 
 
 <style lang="scss" scoped>
-  .button {
-    padding: 0 1.5rem;
-  }
-  
-  .icon {
-    color: #293251;
-  }
-  
-  .button {}
+@import "@/assets/_variables.scss";
+
+.button {
+  padding: 0 1.5rem;
+}
+
+.icon {
+  color: $dark;
+}
+
+.button {
+}
 </style>

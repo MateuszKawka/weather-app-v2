@@ -41,14 +41,16 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@import "@/assets/_variables.scss";
+
 .value {
-  color: #2cb383;
+  color: $dark;
   font-weight: 500;
   font-size: 1.5rem;
 }
 
 .name {
-color: #333333;
+color: $dark;
 font-size: 1.2rem;
 font-weight: 400;
 }
@@ -65,11 +67,11 @@ font-weight: 400;
 .wi {
   font-size: 24px;
   margin: 1rem;
-  color: #333333
+  color: $dark
 }
 
 .column {
-  border-right: 4px solid #E2EFFF;
+  border-right: 4px solid $background;
 }
 
 .column:last-child {

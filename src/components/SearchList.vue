@@ -43,6 +43,8 @@
 
 
 <style lang="scss" scoped>
+@import "@/assets/_variables.scss";
+
   .list-container {
     position: absolute;
     width: 100%;
@@ -66,7 +68,7 @@
   }
   
   .list__item {
-    color: #61615f;
+    color: $dark;
     font-size: 1.6rem;
     font-weight: 500;
     padding: .5rem 1rem;
@@ -74,7 +76,7 @@
   }
   
   .list__item:nth-child(2n) {
-    background: #f7faff;
+    background: $light-gray;
   }
   
   .box {
