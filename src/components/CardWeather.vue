@@ -18,7 +18,11 @@
           <PanelMain :windSpeed='weatherData.wind.speed' :humidity='weatherData.main.humidity' :pressure='weatherData.main.pressure' />
         </div>
         <div class="container is-fluid">
-          <PanelExtra :pressure='weatherData.main.pressure' />
+          <PanelExtra :clouds='weatherData.clouds.all'
+          :visibility='weatherData.main.pressure'
+          :rain='weatherData.rain'
+          :snow='weatherData.snow'
+           />
         </div>
       </div>
     </div>

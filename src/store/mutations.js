@@ -12,5 +12,6 @@ export default {
     let cityIndex = state.savedCities.findIndex(x => x.name === data);
     state.savedCities.splice(cityIndex, 1);
   },
-  loadSavedCities: (state, data) => state.savedCities = data
+  loadSavedCities: (state, data) => state.savedCities = data,
+  setAlertText: (state, data) => state.alertText = data
 }

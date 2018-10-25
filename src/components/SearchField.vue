@@ -2,7 +2,6 @@
   <b-field>
     <b-input placeholder="Search..." icon-pack="fas" icon="search" type="search" size="is-large" class='is-expanded' v-model='searchQ' @keyup.native='setSearchQ' @focus='showList'>
     </b-input>
-  
   </b-field>
 </template>
 

@@ -5,7 +5,7 @@ export default {
       .then(resp => resp.json())
       .then(data => store.commit('setWeatherData', data))
   },
-  loadCityList: function (store) {
+  loadCityList: function () {
     fetch("https://mateuszkawka.github.io/weather-app/src/current.city.list.min.json")
       .then(resp => resp.json())
       .then(function (data) {
@@ -29,7 +29,6 @@ export default {
   },
   removeCityFromSavedCities(store) {
     let cities = store.state.savedCities;
-    let cityName = this.$store.state.cityName;
     let citiesJSON = JSON.stringify(cities)
     localStorage.setItem('cities', citiesJSON);
   }

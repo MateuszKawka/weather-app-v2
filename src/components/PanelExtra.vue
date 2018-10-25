@@ -6,22 +6,22 @@
        
         <p class='name'>Clouds</p>
         <i class="wi wi-cloudy"></i> 
-        <p class='main-info'>40%</p>
+        <p class='main-info'>{{clouds}}%</p>
       </div>
       <div class="column is-3 has-text-centered">
         <p class='name'>Visibility</p>
         <i class="wi wi-hurricane wi-rotate-90"></i> 
-        <p class='main-info'>10 km</p>
+        <p class='main-info'>{{visibility}} km</p>
       </div>
       <div class="column is-3 has-text-centered">
         <p class='name'>Rain</p>
         <i class="wi wi-na"></i> 
-        <p class='main-info'>{{pressure}}</p>
+        <p class='main-info'>{{rain || 'no'}}</p>
       </div>
       <div class="column is-3 has-text-centered">
         <p class='name'>Snow</p>
         <i class="wi wi-snow"></i> 
-        <p class='main-info'>{{pressure}}</p>
+        <p class='main-info'>{{snow || 'no'}}</p>
       </div>
     </div>
   </div>
@@ -31,9 +31,21 @@
   export default {
     name: 'ExtraPanel',
     props: {
-      pressure: {
+      clouds: {
         type: Number,
         required: true
+      },
+      visibility: {
+        type: Number,
+        required: true
+      },
+      rain: {
+        type: Number,
+        required: false
+      },
+      snow: {
+        type: Number,
+        required: false
       }
     }
   }

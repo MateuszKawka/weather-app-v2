@@ -1,13 +1,14 @@
 export default {
-  weatherData: [],
+  weatherData: Array,
   showWeatherCard: false,
   cityName: String,
-  cities: [],
+  cities: Array,
   showFilteredList: true,
-  filteredList: [],
+  filteredList: Array,
   searchQ: '',
   showList: false,
-  savedCities: [],
+  savedCities: Array,
+  alertText: String,
   shortCities: [
     {
       name: 'Warsaw'

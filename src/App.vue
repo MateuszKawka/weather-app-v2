@@ -6,18 +6,20 @@
     <transition name="slide-fade">
       <CardWeather v-if='showWeatherCard' class='card-weather' />
     </transition>
+    <Alert />
   </div>
 </template>
 
 <script>
   import CardWeather from './components/CardWeather.vue'
   import Start from './components/Start.vue'
-  
+  import Alert from './components/Alert.vue'
   export default {
     name: 'app',
     components: {
       CardWeather,
-      Start
+      Start,
+      Alert
     },
     mounted() {
       this.$store.dispatch('getCitiesFromLocalStorage')

@@ -39,9 +39,11 @@ export default {
       if (this.isCitySaved === false) {
         this.$store.commit("saveCity", cityName);
         this.isCitySaved = true;
+        this.$store.commit("setAlertText", 'City saved succesfull!')
       } else {
         this.$store.commit("removeCity", cityName);
         this.isCitySaved = false;
+        this.$store.commit("setAlertText", 'City removed succesfull!')
       }
       this.saveCitiesToLocalStorage();
     },
