@@ -7,6 +7,7 @@ export default {
   filteredList: [],
   searchQ: '',
   showList: false,
+  savedCities: [],
   shortCities: [
     {
       name: 'Warsaw'

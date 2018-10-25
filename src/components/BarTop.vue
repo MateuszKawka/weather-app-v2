@@ -8,7 +8,7 @@
         <h2 class='title is-3 main-title'>Weather</h2>
       </div>
       <div class="column is-4 has-text-centered">
-        <b-icon pack="fas" icon="star" class='bookmark-icon'></b-icon>
+        <b-icon pack="fas" icon="star" class='bookmark-icon' @click.native='saveOrRemoveCity' :class='{"bookmark-icon--save": isCitySaved}'></b-icon>
       </div>
       <b-field v-if='false'>
         <b-input placeholder="Search..." type="search" icon="magnify">
@@ -26,10 +26,45 @@
     components: {
   
     },
+    data() {
+      return {
+        isCitySaved: false
+      }
+    },
+    computed: {
+  
+    },
     methods: {
       weatherCardTrigger: function() {
         this.$store.commit('weatherCardTrigger')
+      },
+      saveOrRemoveCity: function() {
+        this.checkIfCityIsSaved()
+        let cityName = this.$store.state.cityName;
+        if (this.isCitySaved === false) {
+          this.$store.commit('saveCity', cityName);
+        } else {
+          this.$store.commit('removeCity', cityName)
+        }
+        this.saveCitiesToLocalStorage()
+      },
+      saveCitiesToLocalStorage: function() {
+        this.$store.dispatch('saveCitiesToLocalStorage')
+      },
+      checkIfCityIsSaved: function() {
+        let name = this.$store.state.cityName;
+        console.log(name)
+        let cities = this.$store.state.savedCities;
+        console.log(cities.indexOf(name))
+        if (cities.indexOf(name) > -1) {
+          this.isCitySaved = true
+        } else {
+          this.isCitySaved = false
+        }
       }
+    },
+    mounted() {
+      this.checkIfCityIsSaved()
     }
   }
 </script>

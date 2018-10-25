@@ -20,7 +20,7 @@
       Start
     },
     mounted() {
-  
+      this.$store.dispatch('getCitiesFromLocalStorage')
     },
     computed: {
       showWeatherCard: function() {
