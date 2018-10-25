@@ -1,28 +1,67 @@
 <template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div id="app" class='container is-fluid'>
+    <transition name="slide-fade">
+      <Start v-if='!showWeatherCard' />
+    </transition>
+    <transition name="slide-fade">
+      <CardWeather v-if='showWeatherCard' />
+    </transition>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-
-export default {
-  name: 'app',
-  components: {
-    HelloWorld
+  import CardWeather from './components/CardWeather.vue'
+  import Start from './components/Start.vue'
+  
+  export default {
+    name: 'app',
+    components: {
+      CardWeather,
+      Start
+    },
+    mounted() {
+  
+    },
+    computed: {
+      showWeatherCard: function() {
+        return this.$store.state.showWeatherCard
+      }
+    }
   }
-}
 </script>
 
 <style lang="scss">
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+  html {
+    font-size: 62.5%;
+  }
+  
+  .columns {
+    margin: 0 !important;
+  }
+  
+  .wi {
+    color: #fff;
+  }
+  
+  #app {
+    background: #e2efff;
+    min-height: 100vh;
+  }
+  
+  .slide-fade-enter-active {
+    transition: all .4s ease;
+  }
+  
+  .slide-fade-leave-active {
+    transition: all .4s ease;
+  }
+  
+  .slide-fade-enter,
+  .slide-fade-leave-to
+  /* .slide-fade-leave-active below version 2.1.8 */
+  
+  {
+    transform: translateY(24px);
+    opacity: 0;
+  }
 </style>
