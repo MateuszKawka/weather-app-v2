@@ -29,28 +29,26 @@
       },
       saveOrRemoveCity: function() {
         let cityName = this.$store.state.cityName;
-        if (this.isCitySaved === false) {
-          this.$store.commit("saveCity", cityName);
-          this.isCitySaved = true;
-          this.$store.commit("setAlertText", "City saved succesfull!");
-        } else {
-          this.$store.commit("removeCity", cityName);
-          this.isCitySaved = false;
-          this.$store.commit("setAlertText", "City removed succesfull!");
-        }
+        this.isCitySaved === false ? this.saveCity(cityName) : this.removeCity(cityName)
         this.saveCitiesToLocalStorage();
       },
       saveCitiesToLocalStorage: function() {
         this.$store.dispatch("saveCitiesToLocalStorage");
       },
+      saveCity: function(cityName) {
+        this.$store.commit("saveCity", cityName);
+        this.isCitySaved = true;
+        this.$store.commit("setAlertText", "City saved succesfull!");
+      },
+      removeCity: function(cityName) {
+        this.$store.commit("removeCity", cityName);
+        this.isCitySaved = false;
+        this.$store.commit("setAlertText", "City removed succesfull!");
+      },
       checkIfCityIsSaved: function() {
         let name = this.$store.state.cityName;
         let cities = this.$store.state.savedCities;
-        if (cities.indexOf(name) > -1) {
-          this.isCitySaved = true;
-        } else {
-          this.isCitySaved = false;
-        }
+        cities.indexOf(name) > -1 ? this.isCitySaved = true : this.isCitySaved = false;
       }
     },
     beforeMount() {
