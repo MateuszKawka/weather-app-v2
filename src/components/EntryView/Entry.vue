@@ -1,6 +1,6 @@
 <template>
   <div class="container">
-    <div class="hero">
+    <div class="hero is-fullheight">
       <div class="hero-head has-text-centered">
         <h1 class='title is-2'>Wether app</h1>
         <p class='subtitle is-5'>based on openweathermap api </p>

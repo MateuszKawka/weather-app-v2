@@ -13,5 +13,6 @@ export default {
     state.savedCities.splice(cityIndex, 1);
   },
   loadSavedCities: (state, data) => state.savedCities = data,
-  setAlertText: (state, data) => state.alertText = data
+  setAlertText: (state, data) => state.alertText = data,
+  dataReadyTrigger: (state, data) => state.dataReady = data
 }

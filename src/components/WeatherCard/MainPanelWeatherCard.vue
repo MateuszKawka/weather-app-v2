@@ -3,18 +3,24 @@
     <div class="box">
       <div class="columns is-centered is-mobile">
         <div class="column is-4 has-text-centered">
-          <p class='value'>{{windSpeed}}</p>
-          <i class='wi wi-windy'></i>
+          <b-tooltip type='is-light' label="In kilometers per hour" :animated='true' :square='true' size='is-large' position='is-right'>
+            <p class='value'>{{windSpeed}}</p>
+          </b-tooltip>
+          <p><i class='wi wi-windy'></i></p>
           <p class='name'>Wind</p>
         </div>
         <div class="column is-4 has-text-centered">
-          <p class='value'>{{humidity}}</p>
-          <i class='wi wi-humidity'></i>
+          <b-tooltip type='is-light' label="In kilometers per hour" :animated='true' :square='true' size='is-large'>
+            <p class='value'>{{humidity}}</p>
+          </b-tooltip>
+          <p><i class='wi wi-humidity'></i></p>
           <p class='name'>Humidity</p>
         </div>
         <div class="column is-4 has-text-centered">
-          <p class='value'>{{pressure}}</p>
-          <i class='wi wi-barometer'></i>
+          <b-tooltip type='is-light' label="In kilometers per hour" :animated='true' :square='true' size='is-large' position='is-left'>
+            <p class='value'>{{pressure}}</p>
+          </b-tooltip>
+          <p><i class='wi wi-barometer'></i></p>
           <p class='name'>Pressure</p>
         </div>
       </div>
@@ -78,5 +84,9 @@
   
   .column:last-child {
     border-right: none
+  }
+  
+  .tooltip:after {
+    font-size: 1.6rem !important;
   }
 </style>

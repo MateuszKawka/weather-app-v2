@@ -1,9 +1,9 @@
 <template>
   <div>
     <BarWeatherCard />
-    <div class="card">
+    <div class="card" v-if='dataReady'>
       <ImageWeatherCard />
-      <div class="card-content ">
+      <div class="card-content">
         <MainInfoWeatherCard :temp='weatherData.main.temp' :cityName='weatherData.name' :description='weatherData.weather[0].description' />
         <MainPanelWeatherCard :windSpeed='weatherData.wind.speed' :humidity='weatherData.main.humidity' :pressure='weatherData.main.pressure' />
         <ExtraPanelWeatherCard :clouds='weatherData.clouds.all' :visibility='weatherData.main.pressure' :rain='weatherData.rain' :snow='weatherData.snow' />
@@ -30,6 +30,9 @@
     computed: {
       weatherData: function() {
         return this.$store.state.weatherData;
+      },
+      dataReady: function() {
+        return this.$store.state.dataReady;
       }
     },
     mounted() {
@@ -51,9 +54,7 @@
     background: none;
   }
   
-  .card .container {
-    margin-top: 2rem;
-  }
+ 
   
   .columns {
     margin: 0;

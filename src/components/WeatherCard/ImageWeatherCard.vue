@@ -14,6 +14,6 @@
   
   .card-image {
     height: 15%;
-    margin-top: 10%;
+    margin-top: 5%;
   }
 </style>

@@ -1,5 +1,5 @@
 <template>
-  <b-notification auto-close :duration='duration' :active.sync="visible">
+  <b-notification auto-close :duration='duration' :active.sync="visible"  type='is-light'>
     <p>{{alertText}}</p>
   </b-notification>
 </template>

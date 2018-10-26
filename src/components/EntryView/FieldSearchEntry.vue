@@ -1,6 +1,6 @@
 <template>
-  <b-field class='is-primary'>
-    <b-input placeholder="Search..." icon-pack="fas" icon="search" type="search" size="is-large" class='is-expanded is-twitter search-input' v-model='searchQ' @keyup.native='setSearchQ' @focus='showList'>
+  <b-field>
+    <b-input placeholder="Search..." @blur='hideList' type='search' icon-pack="fas" icon="search" size="is-large" class='is-expanded' v-model='searchQ' @keyup.native='setSearchQ' @focus='showList'>
     </b-input>
   </b-field>
 </template>
@@ -20,6 +20,9 @@
       },
       showList: function() {
         this.$store.commit("showListTrigger", true);
+      },
+      hideList: function() {
+        this.$store.commit("showListTrigger", false)
       }
     }
   };
@@ -33,5 +36,10 @@
   
   .icon {
     color: $dark;
+  }
+  
+  .search-input {
+    background: #384266 !important;
+    border: none;
   }
 </style>

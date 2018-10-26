@@ -3,23 +3,32 @@
     <div class="box">
       <div class="columns is-centered is-mobile">
         <div class="column is-3 has-text-centered">
+          <b-tooltip type='is-light' label="In kilometers per hour" :animated='true' :square='true' size='is-medium' position='is-right'>
           <p class='name'>Clouds</p>
-          <i class="wi wi-cloudy"></i>
+          </b-tooltip>
+          <p><i class="wi wi-cloudy"></i></p>
           <p class='value'>{{clouds}}%</p>
         </div>
         <div class="column is-3 has-text-centered">
+          <b-tooltip type='is-light' label="In kilometers per hour" :animated='true' :square='true' size='is-medium'>
           <p class='name'>Visibility</p>
-          <i class="wi wi-hurricane wi-rotate-90"></i>
+          </b-tooltip>
+          <p><i class="wi wi-hurricane wi-rotate-90"></i></p>
+
           <p class='value'>{{visibility}} km</p>
         </div>
         <div class="column is-3 has-text-centered">
+          <b-tooltip type='is-light' label="In kilometers per hour" :animated='true' :square='true' size='is-medium'>
           <p class='name'>Rain</p>
-          <i class="wi wi-na"></i>
+          </b-tooltip>
+          <p><i class="wi wi-na"></i></p>
           <p class='value'>{{rain || 'no'}}</p>
         </div>
         <div class="column is-3 has-text-centered">
+          <b-tooltip type='is-light' label="In kilometers per hour" :animated='true' :square='true' size='is-medium' position='is-left'>
           <p class='name'>Snow</p>
-          <i class="wi wi-snow"></i>
+          </b-tooltip>
+          <p><i class="wi wi-snow"></i></p>
           <p class='value'>{{snow || 'no'}}</p>
         </div>
       </div>
@@ -79,6 +88,10 @@
     color: $details;
     font-size: 20px;
     margin: 0.5rem 0;
+  }
+
+  .tooltip:after {
+    font-size: 1.6rem !important;
   }
 </style>
 
