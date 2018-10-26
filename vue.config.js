@@ -3,3 +3,13 @@ module.exports = {
       '/weather-app-v2/' :
       '/'
 }
+
+module.exports = {
+  css: {
+    loaderOptions: {
+      sass: {
+        data: `@import 'src/assets/_variables.scss';`
+      }
+    }
+  }
+}

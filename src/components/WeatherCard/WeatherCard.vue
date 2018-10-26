@@ -42,7 +42,7 @@
 </script>
 
 <style lang="scss" scoped>
-  @import "@/assets/_variables.scss";
+  
   .card-content {
     padding: 1rem;
     height: 60%;

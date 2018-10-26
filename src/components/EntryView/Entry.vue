@@ -49,7 +49,7 @@
 
 
 <style lang="scss" scoped>
-  @import "@/assets/_variables.scss";
+  
   .hero {
     padding-bottom: 15%;
     padding-top: 15%;

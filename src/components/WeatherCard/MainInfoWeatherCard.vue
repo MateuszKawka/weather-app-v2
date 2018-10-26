@@ -28,7 +28,7 @@
 </script>
 
 <style lang="scss" scoped>
-  @import "@/assets/_variables.scss";
+  
   .temp {
     color: $white;
     margin-bottom: 1rem;

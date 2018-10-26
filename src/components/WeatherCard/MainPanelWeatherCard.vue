@@ -49,7 +49,7 @@
 </script>
 
 <style lang="scss" scoped>
-  @import "@/assets/_variables.scss";
+  
   .value {
     color: $details;
     font-weight: 400;

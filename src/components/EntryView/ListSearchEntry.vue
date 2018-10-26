@@ -42,7 +42,7 @@
 </script>
 
 <style lang="scss" scoped>
-  @import "@/assets/_variables.scss";
+  
   .list-container {
     position: absolute;
     width: 100%;

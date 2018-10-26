@@ -29,7 +29,7 @@
 </script>
 
 <style lang="scss" scoped>
-  @import "@/assets/_variables.scss";
+  
   .button {
     padding: 0 1.5rem;
   }

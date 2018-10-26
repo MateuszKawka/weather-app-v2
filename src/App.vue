@@ -34,7 +34,7 @@
 </script>
 
 <style lang="scss">
-  @import "@/assets/_variables.scss";
+  
   .columns {
     margin: 0 !important;
   }

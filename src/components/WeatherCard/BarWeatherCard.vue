@@ -58,7 +58,7 @@
 </script>
 
 <style lang="scss" scoped>
-  @import "@/assets/_variables.scss";
+  
   .bar {
     width: 100%;
     height: 10vh;
