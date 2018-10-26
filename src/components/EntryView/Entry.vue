@@ -6,15 +6,15 @@
         <p class='subtitle is-5'>based on openweathermap api </p>
       </div>
       <div class="hero-body">
-        <SavedCities />
+        <CitiesSavedEntry />
       </div>
       <div class="hero-foot">
         <div class="columns is-multiline">
           <div class="column is-12 has-text-centered">
             <transition name="slide-fade" mode='in-out'>
-              <SearchList v-if='showList' />
+              <ListSearchEntry v-if='showList' />
             </transition>
-            <SearchField />
+            <FieldSearchEntry />
           </div>
         </div>
       </div>
@@ -23,16 +23,16 @@
 </template>
 
 <script>
-  import SearchField from '@/components/SearchField.vue'
-  import SearchList from '@/components/SearchList.vue'
-  import SavedCities from '@/components/SavedCities.vue'
+  import FieldSearchEntry from '@/components/EntryView/FieldSearchEntry.vue'
+  import ListSearchEntry from '@/components/EntryView/ListSearchEntry.vue'
+  import CitiesSavedEntry from '@/components/EntryView/CitiesSavedEntry.vue'
   
   export default {
     name: 'Start',
     components: {
-      SearchList,
-      SearchField,
-      SavedCities
+      ListSearchEntry,
+      FieldSearchEntry,
+      CitiesSavedEntry
     },
     methods: {
       weatherCardTrigger: function() {
@@ -49,8 +49,7 @@
 
 
 <style lang="scss" scoped>
-  .container {}
-  
+  @import "@/assets/_variables.scss";
   .hero {
     padding-bottom: 15%;
     padding-top: 15%;
@@ -62,5 +61,10 @@
   
   .hero-foot {
     position: relative;
+  }
+  
+  .title,
+  .subtitle {
+    color: $white;
   }
 </style>

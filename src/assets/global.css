@@ -1,10 +1,8 @@
 html {
   font-size: 62.5%;
 }
-body {
-  color: #333333;
-}
 
-.title, .subtitle {
-  color: #333333;
+.icon svg {
+  width: auto;
+  height: auto;
 }

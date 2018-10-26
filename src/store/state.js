@@ -7,7 +7,7 @@ export default {
   filteredList: Array,
   searchQ: '',
   showList: false,
-  savedCities: Array,
+  savedCities: [],
   alertText: String,
   shortCities: [
     {

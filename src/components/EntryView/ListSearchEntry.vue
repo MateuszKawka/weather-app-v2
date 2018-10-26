@@ -3,7 +3,7 @@
     <div class="box">
       <transition-group name="slide-right" class='list' tag='ul'>
         <li class='list__header has-text-right' key='list-header'>
-          <p>Cities list:</p>
+          <p class='is-primary'>Cities list:</p>
           <b-icon pack="fas" icon="times" @click.native='closeList'></b-icon>
         </li>
         <li v-for='(item, index) in cities' :key='index' class='list__item' @click='setCityName'>{{item.name}}</li>
@@ -41,16 +41,14 @@
   };
 </script>
 
-
 <style lang="scss" scoped>
-@import "@/assets/_variables.scss";
-
+  @import "@/assets/_variables.scss";
   .list-container {
     position: absolute;
     width: 100%;
     left: 0;
     padding: 0 1rem;
-    top: 5rem;
+    bottom: 4rem;
   }
   
   .list {
