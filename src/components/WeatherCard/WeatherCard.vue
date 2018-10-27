@@ -37,6 +37,9 @@
     },
     mounted() {
       this.$store.dispatch("getAndSetWeatherData");
+    },
+    created() {
+      this.$store.commit("setAlertText", "Click or hold your finger on the values to display the units!");
     }
   };
 </script>

@@ -3,21 +3,21 @@
     <div class="box">
       <div class="columns is-centered is-mobile">
         <div class="column is-4 has-text-centered">
-          <b-tooltip type='is-light' label="In kilometers per hour" :animated='true' :square='true' size='is-large' position='is-right'>
+          <b-tooltip type='is-light' label="Meter/sec" :animated='true' :square='false' size='is-large' position='is-right'>
             <p class='value'>{{windSpeed}}</p>
           </b-tooltip>
           <p><i class='wi wi-windy'></i></p>
           <p class='name'>Wind</p>
         </div>
         <div class="column is-4 has-text-centered">
-          <b-tooltip type='is-light' label="In kilometers per hour" :animated='true' :square='true' size='is-large'>
+          <b-tooltip type='is-light' label="Percent" :animated='true' :square='false' size='is-large'>
             <p class='value'>{{humidity}}</p>
           </b-tooltip>
           <p><i class='wi wi-humidity'></i></p>
           <p class='name'>Humidity</p>
         </div>
         <div class="column is-4 has-text-centered">
-          <b-tooltip type='is-light' label="In kilometers per hour" :animated='true' :square='true' size='is-large' position='is-left'>
+          <b-tooltip type='is-light' label="Hectopascal" :animated='true' :square='false' size='is-large' position='is-left'>
             <p class='value'>{{pressure}}</p>
           </b-tooltip>
           <p><i class='wi wi-barometer'></i></p>

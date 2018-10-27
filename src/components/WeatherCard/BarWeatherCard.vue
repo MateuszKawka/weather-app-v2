@@ -2,7 +2,7 @@
   <div class='bar container'>
     <div class="columns is-vcentered is-mobile">
       <div class="column is-4 has-text-centered">
-        <b-icon pack="fas" icon="chevron-left" class='icon' @click.native='weatherCardTrigger'></b-icon>
+        <b-icon pack="fas" icon="chevron-left" type='icon' @click.native='weatherCardTrigger'></b-icon>
       </div>
       <div class="column is-4 has-text-centered">
         <h2 class='title is-3 main-title'>Weather</h2>
@@ -69,11 +69,12 @@
   
   .icon {
     color: $white;
-    font-size: 1.6rem
+    font-size: 1.6rem;
+    height: auto;
+    width: auto;
   }
   
   .title {
-    padding-top: 4px;
     font-weight: 500;
     color: $white;
   }

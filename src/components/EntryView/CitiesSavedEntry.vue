@@ -32,4 +32,9 @@
   .bookmarks__name {
     font-size: 1.4rem;
   }
+
+  .box {
+    background: $light-background;
+    color: $white
+  }
 </style>
