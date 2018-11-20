@@ -44,6 +44,7 @@
         this.$store.commit("removeCity", cityName);
         this.isCitySaved = false;
         this.$store.commit("setAlertText", "City removed succesfull!");
+        
       },
       checkIfCityIsSaved: function() {
         let name = this.$store.state.cityName;

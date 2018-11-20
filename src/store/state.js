@@ -10,8 +10,7 @@ export default {
   savedCities: [],
   alertText: String,
   dataReady: false,
-  shortCities: [
-    {
+  shortCities: [{
       name: 'Warsaw'
     },
     {

@@ -1,10 +1,6 @@
 module.exports = {
   baseUrl: process.env.NODE_ENV === 'production' ?
-      '/weather-app-v2/' :
-      '/'
-}
-
-module.exports = {
+    '/weather-app-v2/' : '/',
   css: {
     loaderOptions: {
       sass: {
