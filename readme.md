@@ -21,13 +21,15 @@ App for presenting accurate weather data from [openweathermap](https://openweath
 
 * filter by name over 200,000 cities from [openweathermap](https://openweathermap.org/)
 
-Supported by Vue.
+Supported by [VueJS](https://vuejs.org/).
 
 ## Project Screen Shot(s)
 
-![Main screen](https://github.com/MateuszKawka/weather-app-v2/blob/master/readme/screenshot1.png "Main screen")
-
-![Weather data screen](https://github.com/MateuszKawka/weather-app-v2/blob/master/readme/screenshot2.png "Weather data screen")
+<img src="https://github.com/MateuszKawka/weather-app-v2/blob/master/readme/screenshot1.png" alt="Main screen"
+	title="Main screen" width="240" />
+ 
+ <img src="https://github.com/MateuszKawka/weather-app-v2/blob/master/readme/screenshot2.png" alt="Weather data screen"
+	title="Weather data screen" width="240" />
 
 ## Installation and Setup Instructions
 
@@ -49,4 +51,3 @@ To Visit App:
 
 `localhost:8080/`  
 
-## Reflection
