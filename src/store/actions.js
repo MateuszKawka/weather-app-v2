@@ -11,17 +11,14 @@ export default {
     fetch(`https://api.openweathermap.org/data/2.5/weather?q=${cityName}&units=metric&APPID=${_0x3738}`)
       .then(resp => resp.json())
       .then(data => store.commit('setWeatherData', data))
-      .then(() => store.commit('dataReadyTrigger', true))
-  },
-  loadCityList: function () {
-    fetch("https://mateuszkawka.github.io/weather-app/src/current.city.list.min.json")
-      .then(resp => resp.json())
-      .then(function (data) {
-        console.log(data)
+      .then(() => {
+        store.commit('dataReadyTrigger', true)
+        store.commit('setCityName', store.state.weatherData.name)
+      }
+      )
+      .catch(error => {
+
       })
-      .catch(function (error) {
-        console.log(error);
-      });
   },
   saveCitiesToLocalStorage(store) {
     let cities = store.state.savedCities;

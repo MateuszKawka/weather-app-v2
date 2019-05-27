@@ -11,9 +11,6 @@
       <div class="hero-foot">
         <div class="columns is-multiline">
           <div class="column is-12 has-text-centered">
-            <transition name="slide-fade" mode='in-out'>
-              <ListSearchEntry v-if='showList' />
-            </transition>
             <FieldSearchEntry />
           </div>
         </div>
@@ -24,13 +21,11 @@
 
 <script>
   import FieldSearchEntry from '@/components/EntryView/FieldSearchEntry.vue'
-  import ListSearchEntry from '@/components/EntryView/ListSearchEntry.vue'
   import CitiesSavedEntry from '@/components/EntryView/CitiesSavedEntry.vue'
   
   export default {
     name: 'Start',
     components: {
-      ListSearchEntry,
       FieldSearchEntry,
       CitiesSavedEntry
     },
@@ -39,11 +34,6 @@
         this.$store.commit('weatherCardTrigger')
       }
     },
-    computed: {
-      showList: function() {
-        return this.$store.state.showList
-      }
-    }
   }
 </script>
 
