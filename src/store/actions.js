@@ -17,7 +17,7 @@ export default {
       }
       )
       .catch(error => {
-
+        console.log(error)
       })
   },
   saveCitiesToLocalStorage(store) {
